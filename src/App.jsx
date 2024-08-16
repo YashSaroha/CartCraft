@@ -1,13 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { CartProvider } from "./context/CartContext"
 import Navbar from "./components/Navbar"
-import Home from "./components/Home"
-import ProductDetail from "./components/ProductDetail"
-import Cart from "./components/Cart"
-import SearchResults from "./components/SearchResults"
-import Wishlist from "./components/Wishlist"
+import Home from "./pages/Home"
+import ProductDetail from "./pages/ProductDetail"
+import Cart from "./pages/Cart"
+import SearchResults from "./pages/SearchResults"
+import Wishlist from "./pages/Wishlist"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import ProtectedRoutes from "@/routes/ProtectedRoutes";
+// import PublicRoutes from "@/routes/PublicRoutes";
+// import { AuthProvider } from "@/context/Auth";
 
 const App = () => {
 

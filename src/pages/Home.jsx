@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { fetchFromApi } from '../utils/fetchFromApi'
-import { Hero, Products, Quote, ImageCard, Footer } from './index'
+import { Hero, Products, Quote, ImageCard, Footer } from '../components/index'
 
 const Home = () => {
 

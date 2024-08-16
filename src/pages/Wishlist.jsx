@@ -1,7 +1,6 @@
 import { CartContext } from '../context/CartContext'
 import { useContext } from 'react'
-import EmptyWishlist from './EmptyWishlist'
-import WishlistItem from './WishlistItem'
+import { EmptyWishlist, WishlistItem } from '../components/index'
 
 const Wishlist = () => {
 
@@ -15,7 +14,7 @@ const Wishlist = () => {
                     MY <span className='text-blue-800 ml-1'>WISHLIST</span>
                 </h1>
                 <div className='flex w-full border-b-[1px] border-b-gray-300 items-center justify-around py-4 font-medium'>
-                    <p className='w-[15%] px-5'>Image</p>
+                    <p className='w-[15%] px-8'>Image</p>
                     <p className='w-[35%] px-10'>Title</p>
                     <p className='w-[15%] text-center'>Unit Price</p>
                     <p className='w-[35%] text-center'>Actions</p>

@@ -30,9 +30,9 @@ const WishlistItem = ({ item }) => {
     }
 
     return (
-        <div className='flex items-center justify-between text-sm h-[18vh] py-5 w-full border-b-[1px] border-b-zinc-200'>
-            <div className='w-[15%] h-full'>
-                <img src={item.image} className='h-full w-[50%]' alt="" />
+        <div className='flex items-center justify-between text-sm h-[15vh] py-3 w-full border-b-[1px] border-b-zinc-200'>
+            <div className='w-[15%] h-full pl-5 flex items-center'>
+                <img src={item.image} className='h-[80%] w-[50%]' alt="" />
             </div>
             <p className='w-[35%] px-4'>{item.title}</p>
             <p className='w-[15%] text-center'>$ {item.price}</p>

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { CartContext } from '../context/CartContext';
-import { CartItem, EmptyCart } from './index'
+import { CartItem, EmptyCart } from '../components/index'
 
 const Cart = () => {
 
@@ -31,7 +31,7 @@ const Cart = () => {
     return (
         <div className='w-full min-h-[85vh] flex px-5'>
             <div className='w-[60%] min-h-full py-8 px-12 flex flex-col justify-start items-start'>
-                <h1 className='font-semibold text-2xl mb-3 text-gray-800'>Your Cart</h1>
+                <h1 className='font-semibold text-2xl mb-3 text-gray-800'>My Cart</h1>
                 {cart.map((cartProduct) => (
                     <div key={cartProduct.id} className='w-full'>
                         <CartItem cartProduct={cartProduct} />
