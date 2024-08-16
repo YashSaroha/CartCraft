@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { CartContext } from '../context/CartContext';
-import { CartItem, EmptyCart } from '../components/index'
+import { CartItem } from '../components';
+import EmptyCart from '../pages/EmptyCart'
 
 const Cart = () => {
 

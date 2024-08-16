@@ -1,6 +1,7 @@
 import { CartContext } from '../context/CartContext'
 import { useContext } from 'react'
-import { EmptyWishlist, WishlistItem } from '../components/index'
+import { WishlistItem } from '../components/index'
+import EmptyWishlist from '../pages/EmptyWishlist'
 
 const Wishlist = () => {
 

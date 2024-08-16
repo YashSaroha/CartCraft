@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchFromApi } from '../utils/fetchFromApi'
 import { FaCartShopping, FaTags, IoHeartSharp, TbTruckDelivery } from "../utils/constants";
-import { Cart, Counter } from '../components/index';
 import { CartContext } from '../context/CartContext';
 import { toast, ToastContainer } from 'react-toastify';
 
