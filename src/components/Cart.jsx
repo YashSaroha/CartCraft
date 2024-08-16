@@ -22,7 +22,7 @@ const Cart = () => {
 
         setTax(Number((subtotal / 10).toFixed(2)))
         if (subtotal < 50) setTotal(Number(subtotal + delivery + tax))
-        if (subtotal > 50) {
+        else {
             setDelivery('Free')
             setTotal(Number(subtotal + tax))
         }
@@ -42,15 +42,15 @@ const Cart = () => {
             <div className='w-[40%] py-8 px-12'>
                 <div>
                     <h1 className='font-semibold text-2xl mb-6 text-gray-800'>Summary</h1>
-                    <div className='flex justify-between font-semibold mb-2 text-zinc-600'>
+                    <div className='flex justify-between font-medium mb-2 text-zinc-600'>
                         <p>Subtotal</p>
                         <p>$ {subtotal}</p>
                     </div>
-                    <div className='flex justify-between font-semibold mb-2 text-zinc-600'>
+                    <div className='flex justify-between font-medium mb-2 text-zinc-600'>
                         <p>Estimated Delivery & Handling</p>
-                        <p>$ {delivery}</p>
+                        <p>{subtotal < 50 ? `$ ${delivery}` : 'Free'}</p>
                     </div>
-                    <div className='flex justify-between font-semibold mb-2 text-zinc-600'>
+                    <div className='flex justify-between font-medium mb-2 text-zinc-600'>
                         <p>Estimated Taxes</p>
                         <p>$ {tax}</p>
                     </div>
@@ -58,7 +58,7 @@ const Cart = () => {
                 <div className='flex flex-col mt-14'>
                     <div className='flex justify-between font-semibold text-xl mb-6'>
                         <p>Total</p>
-                        <p>$ {total}</p>
+                        <p>$ {total.toFixed(2)}</p>
                     </div>
                     <button className='bg-zinc-800 text-white rounded-full py-2 hover:bg-black duration-200 outline-none'>Checkout</button>
                     <button className='border-2 border-zinc-800  rounded-full py-2 outline-none mt-2'>Paypal</button>

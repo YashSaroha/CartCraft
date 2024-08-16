@@ -9,7 +9,7 @@ const Hero = () => {
                     <h1 className='text-xl font-bold text-gray-700'>#Big Fashion Sale</h1>
                     <h1 className='font-bold text-3xl tracking-tighter'>Limited Time Offer!</h1>
                     <h1 className='font-bold text-3xl tracking-tighter'>Upto <span className='italic text-pink-500'>50%</span> OFF!</h1>
-                    <h1 className='text-xl font-bold text-gray-700'>Redefine Your Everday Style</h1>
+                    <h1 className='text-xl font-bold text-gray-700'>Redefine Your Everyday Style</h1>
                 </div>
             </div>
             <div className='h-[175px] flex items-center justify-center py-2 px-6 gap-20'>

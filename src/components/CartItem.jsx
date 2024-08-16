@@ -1,8 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { FaTags, FaStar, IoHeartOutline, IoHeartSharp, AiOutlineDelete } from "../utils/constants";
-import { Counter } from './index';
 import { CartContext } from '../context/CartContext';
-import { FaBullseye } from 'react-icons/fa';
 
 const CartItem = ({ cartProduct }) => {
 
@@ -23,10 +21,8 @@ const CartItem = ({ cartProduct }) => {
     useEffect(() => {
         if (isWishlishted) {
             addToWishlist(cartProduct)
-            console.log(wishlist)
         } else {
             removeFromWishlist(cartProduct.id)
-            console.log(wishlist)
         }
     }, [isWishlishted])
 
@@ -47,7 +43,7 @@ const CartItem = ({ cartProduct }) => {
                 </span>
             </div>
             <div className='w-[20%] h-full flex flex-col items-center justify-between'>
-                <h1 className='font-bold text-xl'>$ {cartProduct.price * cartProduct.quantity}</h1>
+                <h1 className='font-semibold text-xl'>$ {cartProduct.price * cartProduct.quantity}</h1>
                 <div className='flex items-center justify-center gap-2'>
 
                     <button
@@ -55,7 +51,6 @@ const CartItem = ({ cartProduct }) => {
                         onClick={handleAddToWishlist}
                     >
                         {isWishlishted ? <IoHeartSharp className='w-full h-full' /> : <IoHeartOutline className='w-full h-full' />}
-                        {/* <FaHeart className='h-full w-full' /> */}
                     </button>
 
                     <button
@@ -66,7 +61,6 @@ const CartItem = ({ cartProduct }) => {
                     </button>
 
                 </div>
-                {/* <Counter padding={2} prodQuantity={cartProduct.quantity} /> */}
             </div>
         </div>
     )

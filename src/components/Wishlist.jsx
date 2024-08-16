@@ -10,30 +10,23 @@ const Wishlist = () => {
 
     return (
         <div className='h-[89vh] w-full py-7 px-20 bg-zinc-100'>
-            <div className='h-[90%] w-[90%] mx-auto bg-white p-8'>
-
-                <h1 className='font-semibold text-lg mb-3 text-gray-700'>
-                    Your <span className='text-blue-800 ml-1'>WISHLIST</span>
+            <div className='h-full w-[90%] mx-auto bg-white px-8 pb-10 pt-5'>
+                <h1 className='font-semibold text-xl text-gray-700 mb-6 text-center'>
+                    MY <span className='text-blue-800 ml-1'>WISHLIST</span>
                 </h1>
-                {/* <div className='flex flex-row items-center justify-start gap-8 flex-wrap'>
-                {wishlist.map((item) => (
-                    <div key={item.id} className="bg-white flex flex-col items-start h-[70vh] w-[20%] rounded-lg">
-                        <ProductCard product={item} />
-                    </div>
-                ))}
-            </div> */}
-                <div className='flex border-b-[1px] border-b-gray-300 items-center justify-around py-4 font-medium text-center'>
-                    <p className='grow'></p>
-                    <p className='grow-[2]'>Title</p>
-                    <p className='grow'>Unit Price</p>
-                    <p className='grow'>Actions</p>
-                    <p className='grow'>Remove</p>
+                <div className='flex w-full border-b-[1px] border-b-gray-300 items-center justify-around py-4 font-medium'>
+                    <p className='w-[15%] px-5'>Image</p>
+                    <p className='w-[35%] px-10'>Title</p>
+                    <p className='w-[15%] text-center'>Unit Price</p>
+                    <p className='w-[35%] text-center'>Actions</p>
                 </div>
-                {wishlist.map((item) => (
-                    <div key={item.id} className='w-full flex flex-col'>
-                        <WishlistItem item={item} />
-                    </div>
-                ))}
+                <div className='w-full max-h-[80%] overflow-y-scroll'>
+                    {wishlist.map((item) => (
+                        <div key={item.id} className=''>
+                            <WishlistItem item={item} />
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>
