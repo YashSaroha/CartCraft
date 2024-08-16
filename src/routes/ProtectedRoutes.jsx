@@ -1,17 +1,22 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import Home from '../pages/Home'
+import ProductDetail from "../pages/ProductDetail"
+import Cart from "../pages/Cart"
+import SearchResults from "../pages/SearchResults"
+import Wishlist from "../pages/Wishlist"
 
-import { useAuth } from "@/context/auth";
-
+import { useAuth } from "../context/Auth"
 
 const ProtectedRoutes = () => {
     const { isLoggedIn } = useAuth();
 
     return isLoggedIn ? (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/edit/:noteId" element={<Edit />} />
-            <Route path="/open/:noteId" element={<Open />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/products/:id' element={<ProductDetail />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/wishlist' element={<Wishlist />} />
+            <Route path='/products/category/:category' element={<SearchResults />} />
         </Routes>
     ) : (
         <Navigate to="/login" />
