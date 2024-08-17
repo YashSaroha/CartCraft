@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Auth";
 // import bglogin from "../assets/newbg.jpg"
 import bglogin from "../assets/bg-img.png"
@@ -81,10 +81,8 @@ const Login = () => {
                     </button>
                 </form>
                 <p className="text-xs text-zinc-300">
-                    Don't have an account?{" "}
-                    <a href="/signup" className="text-[#2796aa] hover:underline">
-                        Sign up
-                    </a>
+                    Don't have an account?
+                    <Link to='/signup'><span className="text-[#2796aa] hover:underline"> Sign Up</span></Link>
                 </p>
             </div>
         </div>
