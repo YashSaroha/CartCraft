@@ -13,6 +13,8 @@ const Login = () => {
         password: "",
     });
 
+    const [errorMsg, setErrorMsg] = useState("")
+
     const handleSignIn = () => {
         const storedSignupData = JSON.parse(localStorage.getItem("signupData"));
 
@@ -24,9 +26,11 @@ const Login = () => {
             localStorage.setItem("loginData", JSON.stringify(loginData));
             signIn();
             navigate("/");
-            console.log("Login Done");
+            // console.log("Login Done");
+            setErrorMsg("")
         } else {
-            console.log("Invalid credentials");
+            // console.log("Invalid credentials");
+            setErrorMsg("Incorrect email or password!")
         }
     };
 
@@ -35,6 +39,7 @@ const Login = () => {
             ...prevData,
             [e.target.name]: e.target.value,
         }));
+        setErrorMsg("")
     };
     // 2b2738
     return (
@@ -66,6 +71,7 @@ const Login = () => {
                             onChange={handleChange}
                         />
                     </div>
+                    {errorMsg && <p className="text-red-400 text-xs">{errorMsg}</p>}
                     <button
                         type="button"
                         className="bg-[#196a78] text-white w-full py-3 my-6 rounded hover:bg-[#17606d] hover:-translate-y-1 duration-200"
