@@ -30,17 +30,19 @@ const Cart = () => {
     })
 
     return (
-        <div className='w-full min-h-[85vh] flex px-5'>
-            <div className='w-[60%] min-h-full py-8 px-12 flex flex-col justify-start items-start'>
+        <div className='w-full h-[89vh] flex p-10 bg-zinc-100'>
+            <div className='w-[60%] h-full px-8 pt-5 flex flex-col justify-start items-start bg-white'>
                 <h1 className='font-semibold text-2xl mb-3 text-gray-800'>My Cart</h1>
-                {cart.map((cartProduct) => (
-                    <div key={cartProduct.id} className='w-full'>
-                        <CartItem cartProduct={cartProduct} />
-                    </div>
-                ))}
+                <div className='w-full max-h-[85%] overflow-y-scroll'>
+                    {cart.map((cartProduct) => (
+                        <div key={cartProduct.id} className='w-full'>
+                            <CartItem cartProduct={cartProduct} />
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            <div className='w-[40%] py-8 px-12'>
+            <div className='w-[40%] pt-5 px-16'>
                 <div>
                     <h1 className='font-semibold text-2xl mb-6 text-gray-800'>Summary</h1>
                     <div className='flex justify-between font-medium mb-2 text-zinc-600'>

@@ -37,7 +37,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='flex items-center justify-between w-full h-[11vh] py-2 px-6'>
+        <div className='flex items-center justify-between w-full h-[11vh] py-3 px-6'>
 
             {/* Logo and Title */}
             <div className='w-[30%] flex items-center justify-start font-semibold'>
@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
 
             {/* Search Bar */}
-            <div className='w-[60%] h-full p-2'>
+            <div className='w-[60%] h-full p-1 rounded-full shadow-md'>
                 <SearchBar />
             </div>
 
