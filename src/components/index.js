@@ -9,7 +9,8 @@ import ProductCard from './ProductCard.jsx'
 import Products from './Products.jsx'
 import Quote from './Quote.jsx'
 import SearchBar from './SearchBar.jsx'
+import ProfileCard from './ProfileCard.jsx'
 
 export { WishlistItem, CartItem, Counter, Navbar, Footer, Hero, 
-    ImageCard, ProductCard, Products, Quote, SearchBar
+    ImageCard, ProductCard, Products, Quote, SearchBar, ProfileCard
 }

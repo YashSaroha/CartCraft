@@ -38,8 +38,12 @@ import { BiSolidQuoteLeft } from "react-icons/bi";
 import { BiSolidQuoteRight } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
+import { LiaUserEditSolid } from "react-icons/lia";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdLogout } from "react-icons/md";
+
 
 export {FaTags, FaStar, FaMinus, FaPlus, IoLogoInstagram, MdOutlineWhatsapp, FaArrowRight, FaCartShopping, 
     IoHeartOutline, IoHeartSharp, FaUserCircle, TbTruckDelivery, MdOutlineEmail, RiFlashlightFill, FaChevronRight, FaChevronLeft,
-    BiSolidQuoteLeft, BiSolidQuoteRight, AiOutlineDelete, IoMdClose
+    BiSolidQuoteLeft, BiSolidQuoteRight, AiOutlineDelete, IoMdClose, LiaUserEditSolid, IoSettingsOutline, MdLogout
 }

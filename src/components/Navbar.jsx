@@ -1,12 +1,40 @@
 import { Link } from 'react-router-dom';
-import logo from '../../src/assets/logo.png'
+import logo from '../assets/logo.png'
 import { FaCartShopping, IoHeartSharp, FaUserCircle } from "../utils/constants";
-import { SearchBar } from './index'
+import { SearchBar, ProfileCard } from './index'
 import { CartContext } from '../context/CartContext';
-import { useContext } from 'react';
+import { useContext, useState, useRef, useEffect } from 'react';
 
 const Navbar = () => {
     const { cart, wishlist } = useContext(CartContext)
+    const [showProfile, setShowProfile] = useState(false)
+    const profileRef = useRef(null); // Ref for the profilecard div
+    const avatarRef = useRef(null);  // Ref for the avatar icon
+
+    const handleShowProfile = () => {
+        setShowProfile(prev => !prev)
+    }
+
+    // Close the profile div when clicking outside of it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                profileRef.current &&
+                !profileRef.current.contains(event.target) &&
+                !avatarRef.current.contains(event.target)
+            ) {
+                setShowProfile(false);
+            }
+        };
+
+        // Add event listener
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Clean up event listener on unmount
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className='flex items-center justify-between w-full h-[11vh] py-2 px-6'>
@@ -40,10 +68,21 @@ const Navbar = () => {
                         </span>
                     </button>
                 </Link>
-                <button className='rounded-full w-10 h-10 p-[9px] border border-gray-600 hover:bg-zinc-100'>
+                <button
+                    ref={avatarRef}
+                    className='rounded-full w-10 h-10 p-[9px] border border-gray-600 hover:bg-zinc-100'
+                    onClick={handleShowProfile}
+                >
                     <FaUserCircle className='w-full h-full' />
                 </button>
             </div>
+
+            {showProfile && (
+                <div ref={profileRef}>
+                    <ProfileCard />
+                </div>
+            )}
+
         </div>
     )
 }
