@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import bglogin from "../assets/bg-img.png"
 
 const Signup = () => {
@@ -127,7 +127,7 @@ const Signup = () => {
                 <h2 className="text-[40px] font-semibold mb-4">Create an account</h2>
                 <p className="text-sm mb-10 text-zinc-300">
                     Already have an account?
-                    <a href="/login" className="text-[#2796aa] hover:underline"> Login</a>
+                    <Link to='/login'><span className="text-[#2796aa] hover:underline"> Login</span></Link>
                 </p>
                 <form className="w-full">
                     <div className="mb-4 flex justify-between w-full gap-4">
