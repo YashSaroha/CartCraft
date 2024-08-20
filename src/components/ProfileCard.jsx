@@ -9,7 +9,7 @@ const ProfileCard = () => {
     const { signOut } = useAuth()
 
     return (
-        <div className='absolute right-0 top-2 w-[20vw] p-4 text-white rounded-lg mt-16 bg-gradient-to-t from-black to-zinc-800'>
+        <div className='md:absolute md:right-0 md:top-[72px] w-full md:w-[20vw] p-4 text-white rounded-lg bg-gradient-to-t from-black to-[#323238]'>
             <div className='flex flex-col items-center justify-center'>
                 <img src={avatar} alt="" className='w-[75px] mt-1 rounded-full shadow-[2px_2px_22px_1px_#000] hover:shadow-zinc-700' />
                 <p className='font-semibold text-lg mt-4'>{user.name}</p>

@@ -119,19 +119,19 @@ const Signup = () => {
     };
 
     return (
-        <div className="flex justify-center items-start h-screen bg-[#0a2027] overflow-hidden">
-            <div className="w-1/2 h-full py-10 px-10">
-                <img src={bglogin} className="h-full w-full rounded-lg" />
+        <div className="flex flex-col items-start h-screen bg-[#0a2027] overflow-hidden md:flex-row">
+            <div className="w-full h-[20vh] px-10 pt-10 md:w-1/2 md:h-full md:py-10">
+                <img src={bglogin} className="w-[50%] h-full mx-auto rounded-lg md:w-full md:h-full" />
             </div>
-            <div className="w-1/2 h-full flex flex-col py-20 px-24 text-white">
-                <h2 className="text-[40px] font-semibold mb-4">Create an account</h2>
-                <p className="text-sm mb-10 text-zinc-300">
+            <div className="w-full flex flex-col p-10 pt-5 md:h-full md:w-1/2 md:py-20 md:px-24">
+                <h2 className="font-semibold mb-2 text-[25px] text-center text-zinc-300 md:mb-4 md:text-[40px] md:text-start ">Create an account</h2>
+                <p className="text-xs mb-5 text-zinc-300 text-center md:text-start md:mb-10 md:text-sm">
                     Already have an account?
                     <Link to='/login'><span className="text-[#2796aa] hover:underline"> Login</span></Link>
                 </p>
                 <form className="w-full">
-                    <div className="mb-4 flex justify-between w-full gap-4">
-                        <div className="w-1/2">
+                    <div className="mb-4 flex flex-col justify-between w-full gap-4 md:flex-row">
+                        <div className="w-full md:w-1/2">
                             <input
                                 type="text"
                                 name="name"
@@ -141,7 +141,7 @@ const Signup = () => {
                             />
                             {errors?.name && <p className="text-red-400 text-xs">{errors.name}</p>}
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full md:w-1/2">
                             <input
                                 type="text"
                                 name="mobile"
@@ -198,7 +198,7 @@ const Signup = () => {
                     </div>
                     <button
                         type="button"
-                        className="bg-[#196a78] text-white w-full py-3 my-6 rounded hover:bg-[#17606d] hover:-translate-y-1 duration-200"
+                        className="bg-[#196a78] text-white w-full py-3 my-3 rounded md:my-6 hover:bg-[#17606d] hover:-translate-y-1 duration-200"
                         onClick={handleSignup}
                     >
                         Sign Up

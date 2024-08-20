@@ -12,11 +12,13 @@ const Hero = () => {
                     <h1 className='text-xl font-bold text-gray-700'>Redefine Your Everyday Style</h1>
                 </div>
             </div>
-            <div className='h-[175px] flex items-center justify-center py-2 px-6 gap-20'>
+            <div className='w-full h-[33vh] py-6 px-2 md:h-[175px] flex flex-wrap items-center justify-center md:py-2 md:px-6 overflow-x-auto md:overflow-x-hidden'>
                 {categories.map((category) => (
-                    <div key={category.name} className='flex flex-col items-center justify-center rounded-full cursor-pointer'>
-                        <img src={category.img} className='h-16 w-16 p-4 rounded-full bg-zinc-200 hover:-translate-y-2 duration-200' />
-                        <h1 className='text-center h-fit font-bold'>{category.name}</h1>
+                    <div key={category.name} className='w-[14%] h-[45%] mx-4 md:w-auto md:h-auto md:mx-10 flex flex-col items-center justify-center rounded-full cursor-pointer'>
+                        <span className='p-3 md:w-16 md:h-16 md:p-4 bg-zinc-200 hover:-translate-y-2 duration-200 rounded-full'>
+                            <img src={category.img} className='w-full h-full' />
+                        </span>
+                        <h1 className='text-xs md:text-base text-center h-fit font-bold'>{category.name}</h1>
                     </div>
                 ))}
             </div>

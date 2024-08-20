@@ -41,9 +41,11 @@ import { IoMdClose } from "react-icons/io";
 import { LiaUserEditSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
-
+import { BiMenu } from "react-icons/bi";
+import { BiMenuAltRight } from "react-icons/bi";
 
 export {FaTags, FaStar, FaMinus, FaPlus, IoLogoInstagram, MdOutlineWhatsapp, FaArrowRight, FaCartShopping, 
     IoHeartOutline, IoHeartSharp, FaUserCircle, TbTruckDelivery, MdOutlineEmail, RiFlashlightFill, FaChevronRight, FaChevronLeft,
-    BiSolidQuoteLeft, BiSolidQuoteRight, AiOutlineDelete, IoMdClose, LiaUserEditSolid, IoSettingsOutline, MdLogout
+    BiSolidQuoteLeft, BiSolidQuoteRight, AiOutlineDelete, IoMdClose, LiaUserEditSolid, IoSettingsOutline, MdLogout,
+    BiMenu, BiMenuAltRight
 }
