@@ -4,6 +4,7 @@ import ProductDetail from "../pages/ProductDetail"
 import Cart from "../pages/Cart"
 import SearchResults from "../pages/SearchResults"
 import Wishlist from "../pages/Wishlist"
+import Checkout from "../pages/Checkout";
 
 import { useAuth } from "../context/Auth"
 
@@ -17,6 +18,7 @@ const ProtectedRoutes = () => {
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/products/category/:category' element={<SearchResults />} />
+            <Route path='/checkout' element={<Checkout />} />
         </Routes>
     ) : (
         <Navigate to="/login" />

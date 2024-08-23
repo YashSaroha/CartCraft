@@ -9,6 +9,7 @@ import Wishlist from "./pages/Wishlist"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import PageNotFound from "./pages/PageNotFound"
+import Checkout from "./pages/Checkout"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -34,6 +35,7 @@ const App = () => {
               <Route path='/cart' element={<Cart />} />
               <Route path='/wishlist' element={<Wishlist />} />
               <Route path='/products/category/:category' element={<SearchResults />} />
+              <Route path='/checkout' element={<Checkout />} />
             </Route>
           </Routes>
         </BrowserRouter>
