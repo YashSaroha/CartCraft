@@ -23,7 +23,6 @@ const ProductDetail = () => {
         toast('✅ Product added to cart!', {
             position: "bottom-right",
             autoClose: 1499,
-            hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: false,
             draggable: true,
@@ -42,7 +41,6 @@ const ProductDetail = () => {
         toast('✅ Product added to wishlist!', {
             position: "bottom-right",
             autoClose: 1499,
-            hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: false,
             draggable: true,
@@ -56,8 +54,8 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className='h-[100vh] md:h-[89vh] w-full bg-zinc-200 flex flex-col md:flex-row gap-8 py-6 px-8 md:py-12 md:px-16'>
-            <div className='w-full h-[47%] md:w-1/2 md:h-full flex flex-col items-center justify-between'>
+        <div className='min-h-[83vh] h-fit md:h-[89vh] w-full bg-zinc-200 flex flex-col md:flex-row gap-8 py-6 px-8 md:py-12 md:px-16'>
+            <div className='w-full h-[43vh] md:w-1/2 md:h-full flex flex-col items-center justify-between'>
                 <div className='h-[70%] md:h-[78%] w-full rounded-xl bg-white p-4 md:p-8 flex items-center justify-center'>
                     <img src={product.image} className='h-full w-[70%] hover:scale-105 transition duration-300' />
                 </div>

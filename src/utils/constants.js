@@ -22,9 +22,9 @@ import { FaTags } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
-import { IoLogoInstagram } from "react-icons/io";
-import { MdOutlineWhatsapp } from "react-icons/md";
-import { MdOutlineEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
@@ -44,8 +44,8 @@ import { MdLogout } from "react-icons/md";
 import { BiMenu } from "react-icons/bi";
 import { BiMenuAltRight } from "react-icons/bi";
 
-export {FaTags, FaStar, FaMinus, FaPlus, IoLogoInstagram, MdOutlineWhatsapp, FaArrowRight, FaCartShopping, 
-    IoHeartOutline, IoHeartSharp, FaUserCircle, TbTruckDelivery, MdOutlineEmail, RiFlashlightFill, FaChevronRight, FaChevronLeft,
+export {FaTags, FaStar, FaMinus, FaPlus, FaGithub, FaLinkedinIn, FaArrowRight, FaCartShopping, 
+    IoHeartOutline, IoHeartSharp, FaUserCircle, TbTruckDelivery, HiMail, RiFlashlightFill, FaChevronRight, FaChevronLeft,
     BiSolidQuoteLeft, BiSolidQuoteRight, AiOutlineDelete, IoMdClose, LiaUserEditSolid, IoSettingsOutline, MdLogout,
     BiMenu, BiMenuAltRight
 }

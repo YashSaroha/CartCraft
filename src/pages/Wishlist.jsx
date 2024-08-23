@@ -9,8 +9,8 @@ const Wishlist = () => {
     if (wishlist.length === 0) return <EmptyWishlist />
 
     return (
-        <div className='h-[81vh] md:h-[89vh] w-full p-4 md:py-7 md:px-20 bg-zinc-100'>
-            <div className='h-full overflow-y-hidden md:h-full w-full md:w-[90%] md:mx-auto bg-white pt-4 md:px-8 md:pb-10 md:pt-5'>
+        <div className='h-[83vh] md:h-[89vh] w-full p-4 md:py-7 md:px-20 bg-zinc-100'>
+            <div className='h-fit max-h-[78vh] overflow-y-hidden md:max-h-[81vh] w-full md:w-[90%] md:mx-auto bg-white pt-4 md:px-8 md:pb-10 md:pt-5'>
                 <h1 className='font-semibold text-lg md:text-xl text-gray-700 md:mb-6 text-center'>
                     MY <span className='text-purple-700'>WISHLIST</span>
                 </h1>
@@ -20,7 +20,7 @@ const Wishlist = () => {
                     <p className='w-[22%] md:w-[15%] text-center'>Price</p>
                     <p className='w-[25%] md:w-[35%] text-center'>Actions</p>
                 </div>
-                <div className='w-full max-h-[80%] overflow-y-scroll'>
+                <div className='w-full max-h-[calc(78vh-88px)] md:max-h-[calc(81vh-130px)] overflow-y-scroll'>
                     {wishlist.map((item) => (
                         <div key={item.id} className=''>
                             <WishlistItem item={item} />

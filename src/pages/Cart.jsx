@@ -30,7 +30,7 @@ const Cart = () => {
     })
 
     return (
-        <div className='w-full h-auto md:h-[89vh] flex flex-col md:flex-row p-4 pb-8 md:pb-10 md:p-10 bg-zinc-100'>
+        <div className='w-full min-h-[83vh] h-fit md:h-[89vh] flex flex-col md:flex-row p-4 pb-8 md:pb-10 md:p-10 bg-zinc-100'>
             <div className='w-full md:w-[60%] h-fit md:h-full px-4 md:px-8 pt-4 flex flex-col justify-start items-start bg-white'>
                 <h1 className='font-semibold w-full text-lg text-center md:text-2xl md:text-start mb-3 text-gray-800'>MY <span className='text-purple-700'>CART</span></h1>
                 <div className='w-full h-fit md:max-h-[85%] md:overflow-y-scroll'>

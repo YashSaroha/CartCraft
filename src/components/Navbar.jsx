@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
+import avatar from '../assets/avatar.png'
 import { FaCartShopping, IoHeartSharp, FaUserCircle, BiMenu, BiMenuAltRight } from "../utils/constants";
 import { SearchBar, ProfileCard, Hamburger } from './index'
 import { CartContext } from '../context/CartContext';
@@ -82,7 +83,8 @@ const Navbar = () => {
                     className='rounded-full w-10 h-10 p-[9px] border border-gray-600 hover:bg-zinc-100'
                     onClick={handleShowProfileCard}
                 >
-                    <FaUserCircle className='w-full h-full' />
+                    {/* <FaUserCircle className='w-full h-full' /> */}
+                    <img src={avatar} alt="" />
                 </button>
             </div>
 
