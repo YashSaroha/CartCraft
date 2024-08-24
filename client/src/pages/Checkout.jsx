@@ -10,7 +10,7 @@ const Checkout = () => {
     const amount = Math.round(total * 100)
     const currency = 'INR'
     const receiptId = Date.now().toString()
-    const apiUrl = 'http://localhost:5000'
+    const apiUrl = 'https://yash-cartcraft-server.vercel.app'
 
     const navigate = useNavigate()
 
