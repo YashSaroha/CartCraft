@@ -10,7 +10,7 @@ const PaymentSuccess = () => {
     return (
         <div className='px-10 py-5 md:p-5 w-full md:w-[50%] flex flex-col justify-start my-4 mx-auto'>
             <div className='w-full'>
-                <div className='w-[150px] h-[150px] p-8 rounded-full mx-auto flex items-center justify-center shadow-[rgba(22,_199,_46)_0px_0px_10px]'>
+                <div className='w-[100px] h-[100px] md:w-[150px] md:h-[150px] p-8 rounded-full mx-auto flex items-center justify-center shadow-[rgba(22,_199,_46)_0px_0px_10px]'>
                     <lord-icon
                         src="https://cdn.lordicon.com/cgzlioyf.json"
                         trigger="loop"

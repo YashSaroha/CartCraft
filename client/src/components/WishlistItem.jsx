@@ -10,7 +10,7 @@ const WishlistItem = ({ item }) => {
     const add = (e) => {
         addToCart(item, 1)
         toast('✅ Product added to cart!', {
-            position: "bottom-right",
+            position: "bottom-center",
             autoClose: 1499,
             closeOnClick: false,
             pauseOnHover: false,
@@ -20,7 +20,6 @@ const WishlistItem = ({ item }) => {
             limit: 1,
             hideProgressBar: true,
             style: { width: "250px" }
-            // transition: Bounce,
         });
     }
 
@@ -33,7 +32,7 @@ const WishlistItem = ({ item }) => {
             <div className='w-[20%] md:w-[15%] h-full pl-3 md:pl-12 flex items-center justify-center md:justify-start'>
                 <img src={item.image} className='h-[40%] w-[70%] md:h-[70%] md:w-[45%]' alt="" />
             </div>
-            <p className='w-[33%] md:w-[35%] pl-3 pr-0 md:pl-4 md:pr-4 text-xs md:text-sm text-start'>{item.title}</p>
+            <p className='w-[33%] md:w-[35%] pl-3 pr-0 md:pl-4 md:pr-4 text-xs md:text-sm text-start'>{item.title.slice(0, 40)}</p>
             <p className='w-[22%] md:w-[15%] text-center text-xs md:text-sm'>$ {item.price}</p>
             <div className='w-[25%] md:w-[35%] flex items-center md:justify-center justify-end gap-2 md:gap-8 md:pl-8'>
                 <button

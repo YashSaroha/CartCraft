@@ -21,7 +21,7 @@ const ProductDetail = () => {
         e.preventDefault()
         addToCart(product, 1)
         toast('✅ Product added to cart!', {
-            position: "bottom-right",
+            position: "bottom-center",
             autoClose: 1499,
             closeOnClick: false,
             pauseOnHover: false,
@@ -39,7 +39,7 @@ const ProductDetail = () => {
         e.preventDefault()
         addToWishlist(product)
         toast('✅ Product added to wishlist!', {
-            position: "bottom-right",
+            position: "bottom-center",
             autoClose: 1499,
             closeOnClick: false,
             pauseOnHover: false,

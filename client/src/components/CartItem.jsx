@@ -27,12 +27,12 @@ const CartItem = ({ cartProduct }) => {
     }, [isWishlishted])
 
     return (
-        <div className='flex justify-center items-center h-[15vh] text-sm py-4 w-full border-b-[1px] border-b-zinc-200'>
+        <div className='flex justify-center items-center h-[15vh] text-sm py-4 w-full border-b-[1px] border-b-zinc-200 overflow-x-hidden'>
             <div className='w-[16%] h-full flex items-center justify-center '>
                 <img src={cartProduct.image} className='h-[60%] w-full md:h-[70%] md:w-[50%]' />
             </div>
             <div className='w-[62%] h-full pl-6 pr-10 flex flex-col justify-center md:justify-start'>
-                <h1 className='font-medium text-xs md:text-sm md:leading-4'>{cartProduct.title.slice(1, 43)}</h1>
+                <h1 className='font-medium text-xs md:text-sm md:leading-4'>{cartProduct.title.slice(0, 43)}</h1>
                 <span className='hidden md:flex items-center gap-2 mt-3'>
                     <FaStar className='text-zinc-400' />
                     <p className='font-semibold text-xs text-zinc-400 [word-spacing:3px]'>Rating: {cartProduct.rating.rate}</p>

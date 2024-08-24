@@ -27,7 +27,7 @@ const ShippingForm = () => {
         e.preventDefault();
         localStorage.setItem('billingData', JSON.stringify(formData))
         toast('✅ Address saved!', {
-            position: "bottom-right",
+            position: "bottom-center",
             autoClose: 1499,
             closeOnClick: false,
             pauseOnHover: false,
