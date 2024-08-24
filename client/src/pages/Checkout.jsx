@@ -16,7 +16,7 @@ const Checkout = () => {
     const handlePayment = async (e) => {
         const orderData = JSON.parse(localStorage.getItem('billingData'));
         console.log(orderData)
-        const response = await fetch('http://localhost:5000/order', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
             method: "POST",
             body: JSON.stringify({
                 amount, currency, receipt: receiptId,
