@@ -47,7 +47,7 @@ const Checkout = () => {
                     //     paymentId: response.razorpay_payment_id,
                     //     amount: amount / 100,
                     // });
-                    await fetch('http://localhost:5000/api/send-email', {
+                    await fetch(`${process.env.REACT_APP_API_URL}/api/send-email`, {
                         method: "POST",
                         body: JSON.stringify({
                             email: orderData.email || 'yashsaroha966@gmail.com',
