@@ -4,6 +4,7 @@ const Razorpay = require('razorpay')
 const cors = require('cors')
 require('dotenv').config()
 const nodemailer = require('nodemailer');
+const path = require('path')
 
 const app = express();
 const PORT = process.env.PORT || 5000

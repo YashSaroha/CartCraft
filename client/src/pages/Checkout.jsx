@@ -10,13 +10,14 @@ const Checkout = () => {
     const amount = Math.round(total * 100)
     const currency = 'INR'
     const receiptId = Date.now().toString()
+    const apiUrl = 'http://localhost:5000'
 
     const navigate = useNavigate()
 
     const handlePayment = async (e) => {
         const orderData = JSON.parse(localStorage.getItem('billingData'));
         console.log(orderData)
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
+        const response = await fetch(`${apiUrl}/order`, {
             method: "POST",
             body: JSON.stringify({
                 amount, currency, receipt: receiptId,
@@ -47,7 +48,7 @@ const Checkout = () => {
                     //     paymentId: response.razorpay_payment_id,
                     //     amount: amount / 100,
                     // });
-                    await fetch(`${process.env.REACT_APP_API_URL}/api/send-email`, {
+                    await fetch(`${apiUrl}/api/send-email`, {
                         method: "POST",
                         body: JSON.stringify({
                             email: orderData.email || 'yashsaroha966@gmail.com',
